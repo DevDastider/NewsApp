@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         setContentView(R.layout.activity_main)
         recyclerView.layoutManager= LinearLayoutManager(this)
         fetchData()
-        mAdapter = NewsListAdapter(this)	//https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html
+        mAdapter = NewsListAdapter(this)
         recyclerView.adapter= mAdapter
     }
 
     private fun fetchData() {
-        val url= "https://newsapi.org/v2/top-headlines?country=in&apiKey=1f4a12d2698e432ea9cf18126dcc7acd"
+        val url= "https://newsapi.org/v2/top-headlines?country=in&apiKey= YOUR_API_GOES_HERE"
         val jsonObjectRequest= object: JsonObjectRequest(
             Request.Method.GET,
             url,
